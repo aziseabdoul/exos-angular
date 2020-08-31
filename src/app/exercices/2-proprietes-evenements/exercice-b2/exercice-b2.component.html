@@ -1,0 +1,8 @@
+<div [ngClass]="{'pair': nombre%2 === 0, 
+'impair': nombre%2 != 0,
+'positif': nombre>0,
+'negatif': nombre<0,
+'zero': nombre === 0
+}">{{nombre}}</div>
+
+<input type="range" min="-100" max="100" [(ngModel)]="nombre">

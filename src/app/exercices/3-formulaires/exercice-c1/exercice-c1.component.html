@@ -1,0 +1,9 @@
+
+<form (ngSubmit)="showImg()">
+	<label>Entrez l'URL d'une image ci-dessous</label><br>
+	<input [(ngModel)]="saisieUtilisateur" [ngModelOptions]="{standalone: true}">
+	<button>Afficher</button><br>
+	{{ saisieUtilisateur }}
+	<img [src]="adresseDeLImage">
+</form>
+

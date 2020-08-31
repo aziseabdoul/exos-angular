@@ -1,0 +1,11 @@
+
+<form>	
+
+<label>je m'abonne à la newsletter</label>
+<input type="checkbox" [checked]="newsletter" (change)="newsletter = !newsletter"/>
+
+<label>j'accepte les cgu</label>
+<input type="checkbox" [checked]="cgu" (change)="cgu = !cgu"/>
+
+<button [disabled]="!newsletter || !cgu">Bouton</button>
+</form>

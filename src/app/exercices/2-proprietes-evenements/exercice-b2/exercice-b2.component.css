@@ -1,0 +1,19 @@
+.pair {
+	color: green;
+}
+
+.impair {
+	color: pink;
+}
+
+.positif {
+	border: 1px solid orange;
+}
+
+.negatif {
+	border: 1px solid blue;
+}
+
+.zero {
+	border: 1px solid grey;
+}

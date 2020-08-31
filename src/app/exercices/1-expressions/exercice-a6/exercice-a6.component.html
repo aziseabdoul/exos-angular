@@ -1,0 +1,18 @@
+<label for="color-select">Choisir une couleur:</label>
+
+<select name="colors" id="color-select" [(ngModel)]="divColor">
+    <option value="">--Choisir une option--</option>
+    <option value="red">rouge</option>
+    <option value="green">vert</option>
+    <option value="blue">bleu</option>
+    <option value="red&green">rouge et vert</option>
+    <option value="red&blue">rouge et bleu</option>
+    <option value="blue&green">bleu et vert</option>
+    <option value="red&green&blue">rouge vert bleu</option>
+</select>
+
+<div class="redDiv" *ngIf="divColor == 'red' || divColor == 'red&green' || divColor == 'red&blue' || divColor == 'red&green&blue'"></div><br>
+
+<div class="greenDiv" *ngIf="divColor =='green' || divColor == 'red&green' || divColor == 'blue&green' || divColor == 'red&green&blue'"></div><br>
+
+<div class="blueDiv" *ngIf="divColor == 'blue' || divColor == 'red&blue' || divColor == 'blue&green' || divColor == 'red&green&blue'"></div>

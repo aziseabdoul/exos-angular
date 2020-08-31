@@ -1,0 +1,24 @@
+<p>exercice-c2</p>
+
+<form #formRef="ngForm">
+	<p>{{ formRef.valid }}</p>
+	<label for="nom">Nom :</label><br>
+	<input id="nom" type="text" name="nom" required minlength="2" [(ngModel)]="utilisateur.nom" #champNom="ngModel">
+	<p>{{ utilisateur.nom }}</p><br>
+	<p *ngIf="champNom.invalid">Il faut au moins 2 caractères</p>
+	
+	<label for="prenom">Prenom :</label><br>
+	<input type="text" name="prenom" required minlength="2" [(ngModel)]="utilisateur.prenom" #champPrenom="ngModel">
+	<p>{{ utilisateur.prenom }}</p><br>
+	<p *ngIf="champPrenom.invalid">Il faut au moins 2 caractères</p>
+	
+	<label for="courriel">Courriel :</label><br>
+	<input type="text" name="courriel" required="" [(ngModel)]="utilisateur.courriel" #champCourriel="ngModel">
+	<p>{{ utilisateur.courriel }}</p><br>
+	<p *ngIf="champCourriel.invalid">Veuillez fournir un courriel</p>
+	
+	<label for="age">Age :</label><br>
+	<input type="number" name="age" [(ngModel)]="utilisateur.age" #champAge="ngModel">
+	<p>{{ utilisateur.age }}</p><br>
+</form>
+

@@ -1,0 +1,6 @@
+<p *ngFor="let voiture of voitures">
+{{ voiture.modele | titlecase }} 
+{{ voiture.puissance | uppercase }} 
+{{ voiture.prix | currency:'EUR' }} 
+{{ voiture.annee * 1000 | date:"dd/MM/yyyy" }}
+</p>
